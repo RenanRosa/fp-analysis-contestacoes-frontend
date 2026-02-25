@@ -1,0 +1,118 @@
+.dashboard {
+    width: 100%;
+}
+
+.loading-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+}
+
+/* KPI Grid - Single line, squishing if necessary */
+.kpi-grid {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.kpi-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    transition: border-color 0.2s, transform 0.2s;
+    flex: 1;
+    /* Allow cards to grow/shrink equally */
+    min-width: 0;
+    /* Important: allows flex children to shrink below content size if necessary */
+}
+
+/* On smaller screens we reduce padding and font size so it all still looks good squished */
+@media (max-width: 1100px) {
+    .kpi-grid {
+        gap: 8px;
+    }
+
+    .kpi-card {
+        padding: 12px;
+        gap: 8px;
+    }
+
+    .kpi-value {
+        font-size: 20px;
+    }
+
+    .kpi-icon {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+.kpi-card:hover {
+    border-color: var(--border-accent);
+    transform: translateY(-2px);
+}
+
+.kpi-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.kpi-value {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.kpi-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-top: 4px;
+}
+
+.kpi-sub {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+/* Lawyer charts row */
+.dashboard-lawyers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+@media (max-width: 900px) {
+    .dashboard-lawyers {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.card-header h3 {
+    font-size: 15px;
+    font-weight: 600;
+    flex: 1;
+}
