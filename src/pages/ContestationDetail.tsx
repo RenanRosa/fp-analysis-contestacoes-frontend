@@ -179,9 +179,6 @@ export default function ContestationDetail() {
                         <div className="detail-split">
                             <div className="card content-card">
                                 <div className="content-header">
-                                    <div>
-                                        <div className="content-date">{formatDate(latest!.created_at)}</div>
-                                    </div>
                                     <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
                                         <button
                                             className="btn btn-secondary btn-sm"

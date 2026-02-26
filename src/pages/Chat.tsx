@@ -94,7 +94,7 @@ export default function Chat() {
                 <form onSubmit={handleSend} className="chat-input-box">
                     <input
                         type="text"
-                        placeholder="Pergunte sobre seus processos, advogados ou métricas..."
+                        placeholder="Pergunte ao assistente especializado na sua base de dados"
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
                         disabled={loading}

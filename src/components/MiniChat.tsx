@@ -145,7 +145,7 @@ export default function MiniChat({
                 <form onSubmit={handleSend} className="mini-chat-input-box">
                     <input
                         type="text"
-                        placeholder="Pergunte sobre a contestação..."
+                        placeholder="Pergunte ao assistente..."
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
                         disabled={loading}
