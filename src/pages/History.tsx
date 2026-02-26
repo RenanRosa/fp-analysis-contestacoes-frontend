@@ -17,6 +17,7 @@ interface Petition {
     author_name?: string;
     lawyer_name?: string;
     similarity_score?: number;
+    document_analysis?: string;
 }
 
 const truncateText = (text?: string, limit: number = 20) => {

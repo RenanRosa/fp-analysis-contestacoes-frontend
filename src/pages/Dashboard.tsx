@@ -49,7 +49,7 @@ const DarkTooltip = ({ active, payload, label }: any) => {
         }}>
             {label && <div style={{ color: 'var(--text-secondary)', marginBottom: 4 }}>{label}</div>}
             {payload.map((p: any, i: number) => (
-                <div key={i} style={{ color: p.color || 'var(--accent-light)', fontWeight: 600 }}>
+                <div key={i} style={{ color: p.color || 'var(--text-primary)', fontWeight: 600 }}>
                     {p.name !== 'count' ? `${p.name}: ` : ''}{p.value} petição(ões)
                 </div>
             ))}
@@ -236,6 +236,7 @@ export default function Dashboard() {
                                     fontSize: 12,
                                 }}
                                 labelStyle={{ color: 'var(--text-secondary)' }}
+                                itemStyle={{ color: 'var(--text-primary)' }}
                             />
                             <Legend />
                         </PieChart>
@@ -277,6 +278,7 @@ export default function Dashboard() {
                                         fontSize: 12,
                                     }}
                                     labelStyle={{ color: 'var(--text-secondary)' }}
+                                    itemStyle={{ color: 'var(--text-primary)' }}
                                 />
                                 <Legend
                                     formatter={(value) => (
