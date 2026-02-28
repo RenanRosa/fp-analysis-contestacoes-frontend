@@ -217,9 +217,9 @@ export default function History() {
                                                 <button
                                                     className="btn btn-secondary btn-sm"
                                                     onClick={() => navigate(`/contestations/${p.id}`)}
-                                                    title="Ver Contestação"
+                                                    title="Analisar Contestação"
                                                 >
-                                                    <Eye size={13} /> Ver
+                                                    <Eye size={13} /> Analisar
                                                 </button>
                                             )}
 
